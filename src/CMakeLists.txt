@@ -14,7 +14,7 @@ add_executable(testogl main.cpp)
 #########################################################
 
 # create the program “testogl”
-target_link_libraries(testogl ${OPENGL_LIBRARIES} ${GLEW_LIBRARY} ${GLFW_LIBRARIES})
+target_link_libraries(testogl ${GLFW_LIBRARIES} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY}) 
 
 if(CMAKE_GENERATOR STREQUAL Xcode)
   set_target_properties( testogl PROPERTIES

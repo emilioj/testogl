@@ -1,4 +1,4 @@
-#version 400 core
+#version 130 core
 
 void main(void)
 {

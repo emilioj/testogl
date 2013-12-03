@@ -7,7 +7,6 @@
 
 #include <GLFW/glfw3.h>
 
-
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
 
@@ -132,7 +131,7 @@ void keyboardCallback(GLFWwindow* window, int key, int scancode, int action, int
 void display()
 {
     static const GLfloat red[] = { 1.0f, 0.0f, 0.0f, 1.0f };
-    glClearBufferfv(GL_COLOR, 0, red);
+    glClearBufferfv(GL_COLOR, GL_FRONT_AND_BACK, red);
 }
 
 int main(int argc, char **argv)
@@ -144,10 +143,10 @@ int main(int argc, char **argv)
         return -1;
 
     /* create context */
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    //glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    //glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "testogl", NULL, NULL);
